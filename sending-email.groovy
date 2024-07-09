@@ -34,8 +34,7 @@ pipeline{
                         to: "${params.RecipientEmailId}",
                         subject: "${emailSubject}",
                         body: "${emailBody}",
-                        mimeType: 'text/plain',
-                        attachLog: true
+                        mimeType: 'text/plain'
                     )
                 }
             }
