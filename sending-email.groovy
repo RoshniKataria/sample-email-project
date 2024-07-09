@@ -4,7 +4,7 @@ pipeline{
         string(
             name: 'RecipientEmailId',
             description: 'Enter the emails to which you want to send the request'
-        ),
+        )
         string(
             name: 'CafeName',
             description: 'Enter the cafe name with which you want to collaborate'
@@ -30,8 +30,13 @@ pipeline{
                         Instagram: https://www.instagram.com/roshnii_kataria?igsh=ZDBqMGIydmp3YWJk&utm_source=qr
                     """
                     def emailSubject = "Collaboration Opportunity: Reviewing Your Cafe: ${params.CafeName} on Instagram!"
-
-                    sendEmail("${params.RecipientEmailId}","${emailSubject}","${emailBody}")
+                    emailext(
+                        to: "${params.RecipientEmailId}",
+                        subject: "${emailSubject}",
+                        body: "${emailBody}",
+                        mimeType: 'text/plain',
+                        attachLog: true
+                    )
                 }
             }
         }
