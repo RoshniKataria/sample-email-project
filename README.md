@@ -1,1 +1,5 @@
 # sample-email-project
+
+Current Process: Currently, there is a dependency on other domain teams for tasks such as creating IAM roles, updating Kinesis streams, and modifying DynamoDB tables. The production team verifies these changes on their side and gives a go-ahead. However, manual checks are also performed by developers to ensure everything has been implemented correctly. For Service Catalog (SC) provisioning, we first need to verify whether the required SC product is published on the respective AWS Console before provisioning can begin. This process is time-consuming and involves manual effort.
+
+Solution Design: To streamline this process, we have developed an automation tool called ADD (Automated Delivery Document) as a Jenkins pipeline. This pipeline performs pre-checks on all interdependent resources and verifies that the SC products are published and available on the respective AWS accounts. The output is a comprehensive report that details the resources that have been created or updated on the AWS console.
