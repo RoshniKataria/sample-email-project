@@ -1,0 +1,4 @@
+
+The update-domain-manifest pipeline handles several tasks. It updates the manifest file by managing the pendingDeploymentVersion and packageVersion for both Service Catalog (SC) and CloudFormation (CF) deployments. Additionally, it updates the manifest during promotions, such as moving deployments from one environment to another. In parallel, it maintains a passport file that logs details like the version deployed, who deployed it, when it was deployed, and who approved it.
+
+
