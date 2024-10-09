@@ -2,3 +2,6 @@
 The update-domain-manifest pipeline handles several tasks. It updates the manifest file by managing the pendingDeploymentVersion and packageVersion for both Service Catalog (SC) and CloudFormation (CF) deployments. Additionally, it updates the manifest during promotions, such as moving deployments from one environment to another. In parallel, it maintains a passport file that logs details like the version deployed, who deployed it, when it was deployed, and who approved it.
 
 The Update Manifest Key pipeline updates specified keys in the manifest file for all components listed in the parameters. You also have the flexibility to update these keys across all environments. The keys that can be updated are deploymentRequired, deploymentType, and bgDeployment.
+
+
+We have agreed with Jignesh that, until the NGCB-wide orchestration solution is fully implemented, a dedicated team will handle the interim process across all NGCB domains. This team will be responsible for creating and managing the necessary JSON files in all accounts. This will ensure that the necessary configuration and deployment mappings are in place across domains for the time being, enabling seamless transition until the centralized orchestration solution is live.
