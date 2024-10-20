@@ -79,3 +79,23 @@ Infra Manifest Adoption: The shift to manifest-based deployments demonstrates a 
 Integration Testing in ECS: By incorporating integration tests into existing pipelines, we promote a culture of quality assurance and innovation, challenging teams to prioritize testing and reliability.
 Multi-Region Provisioning: Expanding provisioning capabilities across multiple regions encourages teams to think globally and adapt to diverse operational environments, fostering innovative solutions to complex challenges.
 Overall Strategy: A culture that values diverse perspectives and challenges the status quo encourages teams to continuously seek improvements and embrace change, driving progress and operational excellence.
+
+Created a docker-base-image-build pipeline to automate the process of fetching and updating base images from BCP Confluence pages. This ensures that clients receive high-quality, up-to-date products in a timely manner, enhancing their operational efficiency.
+Deliver Quality Outcomes:
+Implemented a centralized communication system that pushes updates of new base images to a dedicated Confluence page and sends email notifications to all delivery leads. This transparency allows clients to make informed decisions, ensuring they receive fair value while minimizing foreseeable harm.
+Support Sustainability:
+Designed the solution to comply with sustainability strategies, ensuring that products and services contribute to Barclays' ESG (Environmental, Social, and Corporate Governance) goals. This commitment to sustainability not only benefits the environment but also resonates with clients who prioritize corporate responsibility.
+Automated Delivery Document (ADD):
+Developed the automated-delivery-document pipeline which includes pre-checks and post-checks, along with comprehensive reporting. This system enhances the reliability of our service delivery, ensuring that clients are informed about resource creation or updates, thereby minimizing disruptions.
+Enhancing Communication and Reporting:
+Introduced color-coded reporting in the ADD pipeline to visually distinguish between passed and failed checks. This improvement aids clients in quickly assessing the status of their resources, enhancing their overall experience.
+Support for Integration and Continuous Deployment:
+Created pipelines for Python Glue support, enabling continuous builds and deployments. This flexibility allows our clients to adapt swiftly to changes, improving their ability to respond to market demands.
+Service Quota Monitoring Enhancements:
+Implemented a pipeline for monitoring service quotas that runs weekly, ensuring clients have up-to-date information on their resource usage. This proactive approach helps clients avoid service interruptions and promotes effective resource management.
+Comprehensive Documentation and Training:
+Authored detailed Confluence pages that provide all necessary information for implementing solutions. Additionally, conducted training sessions to ensure that other teams, such as Proman and EDP, are well-equipped to adopt the new processes, fostering a culture of knowledge sharing.
+Live Production Solutions:
+Successfully deployed solutions that are now live in production, demonstrating our commitment to delivering quality outcomes and supporting our clients’ needs efficiently.
+Multi-Region Support:
+Provisioned GTIS products across multiple environments, ensuring clients can operate seamlessly in different regions, which is crucial for global operations.
