@@ -108,3 +108,55 @@ Multi-Region Support: Modified existing provisioning pipelines to support multi-
 3. CFTS Creation
 New Product Offerings: Developed and published new CloudFormation Templates (CFTS) for SSM parameters and KMS, facilitating additional product provisioning.
 This detailed report captures your comprehensive contributions and the impact of your implementations across various projects, showcasing your expertise in automation, cloud services, and continuous integration and delivery.
+
+
+Objective: Manage Risks and Strengthen Controls
+Proof of Concept (POC) Achievements:
+
+Evergreening Solution Implementation:
+Developed a docker-base-image-build pipeline that automates fetching and updating base images from BCP Confluence pages into our base-container-image repository. This automation minimizes the risk of outdated images being used, ensuring that all deployments are based on the most current and secure versions.
+Centralized Communication:
+Created a system that pushes updates of new base images to a centralized Confluence page and sends email notifications to all delivery leads. This centralized approach ensures that all stakeholders are informed of available resources, reducing the risk of miscommunication and enhancing accountability.
+Scheduled Pipeline Triggers:
+Implemented a docker-base-image-build-trigger pipeline with a scheduled run every week. This regular update mechanism ensures that all teams have access to the latest resources, minimizing the risk of delays due to outdated or unavailable images.
+Detailed Documentation:
+Authored comprehensive Confluence pages detailing the entire solution and implementation guidelines. This documentation provides a clear framework for other projects to adopt the solution, enhancing knowledge transfer and reducing the risk of inconsistent implementations.
+Adoption and Training:
+Conducted adoption sessions for projects like Enterprise Data Platform and Proman, facilitating a smooth implementation process. This proactive training helps mitigate risks associated with new technologies and ensures that teams are well-equipped to use the new systems.
+Tracker Pages for Adoption:
+Created tracker pages to monitor the adoption of new base images across different domains. This tracking mechanism allows for early identification of potential issues in adoption, enabling timely interventions.
+Python Glue Support Pipelines:
+Support for Glue Applications:
+Developed several pipelines for Python Glue, including python-lambda-glue-build-job and python-lambda-glue-deploy-job, which improve the management and deployment of Lambda functions. This structured approach reduces risks associated with manual deployments and ensures consistency across environments.
+Version Control and Dependency Management:
+Implemented artifact versioning in the build job, ensuring that all deployed versions are tracked and easily retrievable. This strengthens controls by providing a clear history of changes and allowing for rapid rollbacks in case of deployment failures.
+Enhanced Deployment Pipeline:
+Modified existing pipelines to support the Glue repository structure and automate the push of scripts from Nexus to S3. These modifications ensure that all necessary components are in place before deployment, reducing the likelihood of failures due to missing files.
+Production Readiness:
+Collaborated with the DD domain to onboard Lambda functions, providing step-by-step guidance. This hands-on approach reduces the risk of errors during the onboarding process, ensuring a smooth transition to production.
+Automated Delivery Document (ADD) Implementation:
+AWS CLI Integration:
+Developed two types of pipelines for executing AWS CLI commands through Jenkins and Python scripts, enhancing automation and control over AWS resource management.
+Automated Communication:
+Created the automated-delivery-document pipeline, which includes pre-checks and post-checks along with comprehensive reporting. This automation ensures that stakeholders receive timely updates on resource statuses, minimizing risks associated with unmanaged resources.
+Color-Coded Reporting:
+Introduced color schemes in reports to quickly indicate the status of resources, helping teams quickly identify issues and reducing response time to failures.
+Email Notifications:
+Enhanced email communications by including relevant context, such as branch names and environment details, which helps teams quickly understand the state of their deployments and respond appropriately.
+Failure Handling:
+Implemented detailed failure reports that specify the exact stage at which a deployment failed, allowing for quicker identification and resolution of issues. This strengthens controls by ensuring that all failures are well-documented and addressed promptly.
+Cloud Inventory Comparison and Monitoring:
+Cloud Inventory Comparison Pipeline:
+Created the aws-cloud-inventory-comparison pipeline, enabling teams to compare cloud resources efficiently. This functionality helps identify discrepancies and ensure that all environments are aligned, reducing risks related to configuration drift.
+Service Quota Monitoring Enhancements:
+Developed a pipeline for monitoring service quotas and updating Confluence pages weekly. This proactive monitoring allows teams to stay informed about resource usage, mitigating risks associated with resource exhaustion.
+Improved Visibility and Reporting:
+Added over 30 new quotas to the monitoring solution and introduced parallel execution in the pipeline, significantly improving efficiency. This increased visibility into resource usage helps prevent over-provisioning and under-utilization, thus optimizing costs.
+Infrastructure Manifest and Multi-Region Support:
+Adoption of Manifest-Based Deployments:
+Created a plan and corresponding pipelines for adopting manifest-based deployments in infrastructure components, ensuring that versions are automatically populated without manual intervention. This reduces the risk of human error in deployments.
+Multi-Region Provisioning:
+Enhanced existing pipelines to support multi-region provisioning, ensuring that GTIS products are consistently deployed across environments. This adaptability helps manage risks associated with geographic discrepancies and improves overall resilience.
+Documentation and Knowledge Sharing:
+Authored comprehensive Confluence pages detailing how to implement and manage these solutions, fostering a culture of knowledge sharing and empowering teams to adopt best practices.
+These initiatives collectively demonstrate a commitment to managing risks and strengthening controls across various projects and solutions, ensuring that the organization operates effectively while delivering high-quality outcomes.
