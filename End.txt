@@ -8,3 +8,25 @@ Production Release Involvement: Actively participated in production releases, su
 AWS Solution Architect Certification: Committed to completing the AWS Solution Architect certification by the end of this year to further strengthen my skills and contributions.
 Managerial Guidance: Benefited greatly from my manager’s advice and mentorship, which has been instrumental in my growth since joining the team.
 Commitment to Excellence: Continuously strive to deliver the best in every task, ensuring high-quality outcomes and contributions to the team's success.
+
+
+
+Evergreening Solution
+Automated base image fetching, building, and pushing through the docker-base-image-build pipeline, reducing manual intervention.
+Set up automated notifications and Confluence updates for new base images.
+Created a scheduler-triggered pipeline and documentation for easy adoption across projects.
+Conducted demo and adoption sessions, ensuring streamlined implementation for teams.
+Python Glue Automation
+Built pipelines to automate Python Glue Lambda builds, deployments, and CloudFormation provisioning.
+Standardized Glue applications in manifest-based deployments and created documentation to aid team adoption.
+Supported teams like DD Domain with step-by-step onboarding for Lambda solutions.
+Automated Delivery Document (ADD) Pipeline
+Developed pipelines to automate AWS CLI execution, resource checks, and SC product publishing.
+Enhanced reporting with pre-checks, post-checks, and error-handling improvements, simplifying the deployment workflow.
+Created Confluence guides and tracking pages to monitor ADD adoption.
+Cloud Inventory Comparison
+Automated cloud inventory comparison for ECS and Lambda environments using a Jenkins pipeline and Python script, publishing results on Confluence for streamlined management.
+Measures:
+Automated complex tasks, reducing manual processes.
+Standardized workflows across teams and domains.
+Improved communication and consistency in reporting and deployment outcomes.
