@@ -1,0 +1,110 @@
+Evergreen Solution Implementation
+
+I have successfully developed and implemented an evergreen solution across all domains, focusing on the automation of base image management and continuous integration processes. Below are the key components of this solution:
+
+1. Pipeline Creation: docker-base-image-build
+Automation of Base Image Management: Developed a pipeline named docker-base-image-build to automate the process of fetching base images from BCP Confluence pages.
+Repository Management: The pipeline updates our base-container-image repository with the latest images.
+Structured Nomenclature: It builds the base images using a structured naming convention, ensuring clarity and consistency.
+Nexus Integration: After building, the base images are pushed to Nexus for centralized storage.
+2. Centralized Information Sharing
+Confluence Updates: Implemented code that pushes new base images into a centralized Confluence page, maintaining up-to-date information for stakeholders.
+Email Notifications: Automated email communications to all delivery leads, informing them about the availability of new base images.
+3. Trigger Pipeline Creation: docker-base-image-build-trigger
+Scheduled Execution: Created a trigger pipeline called docker-base-image-build-trigger that automatically triggers the docker-base-image-build pipeline on a predefined schedule, ensuring timely updates.
+4. Documentation and Adoption
+Confluence Documentation: Developed comprehensive Confluence pages detailing the solution and providing guidance for other projects on implementation.
+Adoption Sessions: Conducted sessions to explain the implementation process to other teams, such as the Enterprise Data Platform and Proman.
+Demo Sessions: Delivered demonstrations across relevant forums to showcase the solution's capabilities.
+5. Tracker Pages
+Monitoring Adoption: Established tracker pages to monitor the adoption of new base images across different projects.
+Python Glue Support in Deployment Pipelines
+
+In addition to the evergreen solution, I have created a set of pipelines to support Python Glue integration for build, deploy, and manifest-based deployment solutions:
+
+1. Pipeline Creation: python-lambda-glue-build-job
+Artifact Management: This pipeline supports Glue Lambdas written in Python, automating artifact version creation and pushing it to Nexus.
+2. Pipeline Modification: python-lambda-glue-deploy-job
+Enhanced Structure Support: Modified the existing deployment pipeline to support Glue repository folder structures, facilitating easier fetching of template files.
+S3 Integration: Added functionality for pushing Glue scripts from Nexus to S3 and modified code for provisioning the CloudFormation stack.
+3. New Pipeline Creation: python-lambda-glue-sc-provision
+Provisioning Support: Developed a dedicated pipeline for provisioning Glue scripts, ensuring they are efficiently pushed from Nexus to S3.
+4. Manifest-Based Deployment Enhancements
+Integration in Existing Pipelines: Updated manifest-based deployment pipelines (e.g., publish-component) to incorporate Glue applications, enabling continuous builds and deployments.
+5. Documentation and Training
+Confluence Pages: Created detailed documentation on the Python Glue support solution.
+Support for Onboarding: Assisted team members, such as Pravin Salunke, in integrating their requirements into the existing pipeline, ensuring smooth functionality.
+6. Live Production Solution
+Deployment Success: The implemented solution is now live in production, successfully facilitating Lambda deployments.
+Automated Delivery Document (ADD) Implementation
+
+I have also completed a proof of concept for an Automated Delivery Document (ADD), which includes the following key features:
+
+1. Pipeline Development
+AWS CLI Execution: Created two types of pipelines—one for running AWS CLI through Jenkins supported Groovy language and another through Python scripts.
+Testing: Successfully conducted tests to ensure robust AWS CLI connections via Python scripts through Jenkins.
+2. Automated Delivery Document Pipeline
+Comprehensive Reporting: Developed the automated-delivery-document pipeline that performs pre-checks and post-checks, publishes SC products on the console, and sends email communications with comprehensive reports detailing created or updated AWS resources.
+3. JSON Command File
+Resource Command Support: Created a JSON file that supports commands for resources currently integrated into the ADD.
+4. Enhancements in Reporting
+Improved Color Schemes: Implemented color coding for failed and passed checks in both pre-check and post-check reports.
+Contextual Email Subjects: Enhanced email subjects for pre-checks and post-checks to include branch names and environments.
+Error Handling Improvements: Improved error prompts for when deployments are skipped due to resource unavailability.
+Streamlined Communication: All communications are sent to the ppe-billing-devs distribution list, ensuring appropriate visibility for approvals.
+5. Comprehensive Documentation
+Confluence Pages: Created documentation on how the ADD works and implementation steps for different domains.
+Implementation Tracking: Maintained a tracker page to record which domains have adopted the ADD solution.
+6. Demonstration Sessions
+Forum Presentations: Conducted demo sessions to showcase the ADD features and usage.
+Cloud Inventory Comparison Tool
+
+1. Pipeline Creation: aws-cloud-inventory-comparison
+Flexible Inventory Comparison: Developed a Jenkins pipeline that allows users to compare cloud inventory services such as ECS and Lambda across different environments, checking for version mismatches, application images, and other key metrics.
+2. Python Script Development
+CSV Comparison Logic: Created a Python script to compare two CSV files representing cloud inventories and publish the results to a Confluence page as an Excel sheet.
+Service Quota Monitoring Enhancements
+
+1. Pipeline Creation: confluenceWrite
+Confluence Updates: Developed a pipeline that updates Confluence pages with monitored quotas, creating a dashboard view.
+Scheduled Jobs: Configured the job to run every Monday at 7 AM IST.
+2. Enhancements to Existing Pipelines
+Confluence Page Updates: Integrated code for updating specific Confluence pages for domain teams to track monitored quotas.
+Email Enhancements: Added logos to emails and improved email notifications for quota monitoring updates.
+3. New Quota Integrations
+Expanded Monitoring: Added over 30 new quotas into the existing solution, broadening the scope of monitoring capabilities.
+4. Code Optimization
+Parallel Execution: Introduced parallel execution concepts, significantly reducing total execution time across domains by three hours.
+Subnet ID Segregation: Implemented logic to segregate subnet IDs according to Availability Zones, improving clarity in identifying subnet associations.
+5. Comprehensive Documentation and Support
+Confluence Pages: Created documentation explaining the solution, its functionality, and implementation instructions for teams.
+Support for Various Domains: Assisted multiple domains (Proman, EDP, etc.) in implementing this solution through guidance and demo sessions.
+6. Whitepaper and DevHub Documentation
+Drafting: Completed drafts for a whitepaper detailing the Service Quota Monitoring solution and documentation for publication on DevHub, currently under review.
+Infrastructure Manifest Adoption
+
+1. Confluence Planning
+Manifest Deployment Plans: Developed a plan on Confluence outlining how to adopt manifest-based deployment solutions for infrastructure components.
+2. Pipeline Creation
+Rapid Development: Created pipelines for infrastructure manifest deployments, enabling automatic version population without manual intervention.
+Integration Test Cases Support in ECS
+
+1. Pipeline Modification: common-ecs-build
+Integration Test Support: Enhanced the existing common-ecs-build pipeline to include integration test case support by building packages inside Docker containers.
+2. Base Image Development
+JDK Base Image Pipeline: Created a pipeline named docker-base-image-jdk-build to supply the latest JDK base images from the BCP team to support Maven operations in Docker.
+3. Trigger Pipeline for JDK Base Images
+Scheduled Trigger: Developed a trigger pipeline that runs every Sunday at 10:30 AM IST, sending out email notifications regarding newly released JDK base images.
+DevOps Tools Pipeline
+
+1. Pipeline Creation: devops-tools
+AWS CLI Command Execution: Created a user-friendly pipeline that allows for the execution of any AWS CLI command across accounts, as well as the deletion of SCProvisionedProducts or CloudFormation stacks.
+Multi-Region Proof of Concept
+
+1. Provisioning GTIS Products
+Multi-Region Product Provisioning: Successfully provisioned multiple GTIS products (core-vpc, subnets, etc.) in the PPE TEST and SIT Test Accounts.
+2. Pipeline Modifications
+Multi-Region Support: Modified existing provisioning pipelines to support multi-region capabilities, enhancing operational flexibility.
+3. CFTS Creation
+New Product Offerings: Developed and published new CloudFormation Templates (CFTS) for SSM parameters and KMS, facilitating additional product provisioning.
+This detailed report captures your comprehensive contributions and the impact of your implementations across various projects, showcasing your expertise in automation, cloud services, and continuous integration and delivery.
