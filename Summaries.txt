@@ -160,3 +160,21 @@ Enhanced existing pipelines to support multi-region provisioning, ensuring that 
 Documentation and Knowledge Sharing:
 Authored comprehensive Confluence pages detailing how to implement and manage these solutions, fostering a culture of knowledge sharing and empowering teams to adopt best practices.
 These initiatives collectively demonstrate a commitment to managing risks and strengthening controls across various projects and solutions, ensuring that the organization operates effectively while delivering high-quality outcomes.
+
+
+Challenge
+I have fostered an environment where questioning and curiosity are encouraged, allowing for clarity and improvement in our projects.
+Drive
+My passion for excellence propels me to consistently deliver improvements and achieve positive outcomes in every task I undertake.
+Empower
+I actively support my teammates’ insights and decisions, valuing their contributions to foster a collaborative and empowering atmosphere.
+Respect
+I uphold respect and honesty in all interactions, prioritizing the needs of both the business and my colleagues.
+Integrity
+My work is characterized by honesty and transparency, ensuring that I maintain trust with my teammates and stakeholders.
+Service
+I focus on delivering high-quality service by putting people and business needs at the center of my efforts.
+Excellence
+I strive for excellence in my contributions, always aiming to exceed expectations and maintain sustainability in my work.
+Stewardship
+I take responsibility for my actions and decisions, learning from my experiences and ensuring a positive impact on my projects and the team.
