@@ -40,3 +40,12 @@ I have consistently motivated my colleagues to perform at their best, encouragin
 I have always encouraged my teammates to focus on their personal and professional development, often suggesting they explore new technologies such as GenAI and Machine Learning to enhance their skill sets.
 
 I’ve also supported colleagues like Himanshu, Veeramani, Anjali, and Vishal whenever they needed assistance with tasks, ensuring that I delivered help promptly and contributed to their success.
+
+I have always taken the initiative to learn new technologies and continuously expand my skill set. Recently, I participated in the AWS DeepRacer event, where I gained valuable knowledge about autonomous driving models and the application of reinforcement learning to train and optimize the performance of self-driving cars. Through hands-on experience, I learned how to build and fine-tune machine learning models, optimize reward functions, and improve performance metrics in real-time simulations. This event significantly deepened my understanding of AI and cloud-based machine learning platforms like AWS.
+
+Additionally, I took part in the GenAI Hackathon this year, where I explored the latest advancements in Generative AI. I learned about the foundational models that power generative systems, the techniques for building and deploying GenAI solutions, and how to integrate them into various business applications. This hackathon provided me with insights into real-world use cases, from generating creative content to automating tasks using AI. It also enhanced my understanding of how AI models can be fine-tuned and adapted for specific use cases in industries like finance, healthcare, and retail.
+
+In addition to these initiatives, I have consistently completed all my mandatory trainings assigned by Barclays on time. This has allowed me to stay up-to-date with the necessary compliance requirements and best practices, ensuring that I am fully aligned with the company’s standards and values.
+
+
+I have also actively supported the Talent Exchange Program, where I taught my teammates dance routines, and together we delivered a performance at our launch event. This experience not only fostered team bonding but also showcased the diverse talents within our team, contributing to a fun and vibrant work culture.
