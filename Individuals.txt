@@ -1,0 +1,3 @@
+Challenge: I took on the challenge of optimizing the service quota monitoring job by modifying the existing code to run in parallel. The original code was lengthy and well-structured but required improvements for better efficiency. Additionally, I challenged myself to execute AWS CLI commands through a Python script. Despite the complexities of working within Barclays' proxy environment, I successfully connected using the Boto3 module to interact with AWS services.
+
+Speak Up: Throughout discussions, I consistently shared my thoughts and contributed valuable input. I provided enhanced solutions, offering a more efficient and technically sound approach to improve the overall process.
