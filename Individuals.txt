@@ -1,3 +1,36 @@
 Challenge: I took on the challenge of optimizing the service quota monitoring job by modifying the existing code to run in parallel. The original code was lengthy and well-structured but required improvements for better efficiency. Additionally, I challenged myself to execute AWS CLI commands through a Python script. Despite the complexities of working within Barclays' proxy environment, I successfully connected using the Boto3 module to interact with AWS services.
 
 Speak Up: Throughout discussions, I consistently shared my thoughts and contributed valuable input. I provided enhanced solutions, offering a more efficient and technically sound approach to improve the overall process.
+
+Additionally, I have actively participated in ROTA calls and consistently responded to them in a timely manner. I provided effective solutions during these calls, ensuring prompt resolution of issues as they arose.
+
+
+Manifest-Based Deployments Enhancements:
+Improved the sync-manifest pipeline by introducing a ForceSync option. Components not present in production are now skipped during syncing via E2E, and I refined the function logic for efficiency.
+Enhanced the update-manifest-keys pipeline to support updating keys for multiple resources simultaneously. Introduced the AllEnvironmentsUpdate option, which allows updating keys across all environment .json files in a single operation.
+Added support for deployment types in the update-manifest-keys pipeline, introducing the key deployment_type to facilitate transitions such as EZE CET → SC.
+Modified the common-sc-provision-with-artifactname and other deployment pipelines to include variables like varEnvironment, varAccountID, and varRegion in the SC params JSON, reducing the need for multiple SC param JSON files.
+Added a deploymentRequired tag, allowing resources to be conditionally skipped if they do not require deployment or version changes during a release.
+Created detailed Confluence pages listing all the manifest-based deployment pipelines, with information on parameters, pipeline functionality, and links.
+Service Quota Monitor Solution Enhancements:
+Created a confluenceWrite pipeline that updates Confluence pages with monitored quotas, and built a dashboard that runs every Monday at 7 AM IST to keep track of the quotas.
+Integrated Confluence page updates into the main pipeline, allowing domain teams to monitor quotas on specific Confluence pages.
+Added functionality to include Barclays Logo and Powered By images in Jenkins email notifications.
+Expanded the existing solution by adding 30+ new quotas.
+Introduced parallel execution in the pipeline, reducing execution time by 3 hours across all domains.
+Segregated Subnet IDs based on Availability Zones, helping identify which subnet belongs to which AZ.
+Created detailed Confluence pages for the service quota monitoring solution, explaining implementation and functionality, and conducted numerous demo sessions for various teams (Proman, EDP, etc.).
+Drafted a Whitepaper for the Service Quota Monitoring solution, currently under review, along with documentation to be published on the DevHub platform.
+Application Deployment (ADD) Solution Enhancements:
+Implemented various improvements in the ADD pipeline, including colored schemes to highlight failed and passed resources in both pre-check and post-check reports.
+Enhanced email communication with more context, such as branch name and environment in subject lines, and ensured reports are sent immediately after pre-checks.
+Streamlined the communication process for release success/failure using a single pipeline run.
+Modified report subjects to include statuses like success or failure and added detailed reporting for each pipeline stage (pre-checks, deployment, post-checks).
+Ensured communication for failures at any stage is promptly sent with relevant details and approval links.
+Updated the python-lambda-glue-deploy-job pipeline to support fetching template files for Glue applications and pushing Glue scripts from Nexus to S3.
+Created a new pipeline, python-lambda-glue-sc-provision, supporting SC Glue product provisioning.
+Added continuous build and deploy support for Glue applications in the manifest-based deployment pipelines.
+AWS Cloud Inventory Comparison Pipeline:
+Developed a Jenkins pipeline called aws-cloud-inventory-comparison that allows comparing services like ECS and Lambda across different environments. The comparison checks attributes like version, app image (for ECS), name, and runtime.
+Created a Python script for comparing two CSV files and publishing the results as an Excel sheet to a Confluence page.
+Throughout these efforts, I have consistently optimized processes, engineered effective solutions, and contributed to knowledge sharing via Confluence pages and demo sessions
