@@ -57,3 +57,6 @@ I am in the process of publishing a white paper for the AWS Service Quota Monito
 Additionally, I am publishing the same documentation on the DevHub platform, where it is also under review. This will provide broader visibility and accessibility for teams looking to implement similar solutions.
 
 Furthermore, I make it a point to regularly review the pipelines we have created, conducting monthly checks to ensure they are functioning correctly and that the infrastructure deployed on AWS remains stable and efficient.
+
+
+I challenged myself to deliver an App Image Evergreening solution by creating a pipeline that automates the fetching, updating, and pushing of base images from BCP Confluence to Nexus, updating a centralized Confluence page with notifications, and scheduling the process to run every Sunday at 10:30 AM IST, while also incorporating integration test cases into the ECS pipeline through relevant modifications and trigger pipelines.
