@@ -99,3 +99,24 @@ Live Production Solutions:
 Successfully deployed solutions that are now live in production, demonstrating our commitment to delivering quality outcomes and supporting our clients’ needs efficiently.
 Multi-Region Support:
 Provisioned GTIS products across multiple environments, ensuring clients can operate seamlessly in different regions, which is crucial for global operations.
+
+
+I have significantly enhanced the Manifest-Based Deployments process through several key modifications to existing pipelines:
+
+Sync Manifest Pipeline Modifications:
+Introduced a ForceSync option, allowing for more control over synchronization processes.
+Enhanced the functionality to ensure that components not present in production are skipped during the End-to-End (E2E) sync, leading to more efficient operations.
+Refined the underlying code for improved performance and maintainability.
+Update Manifest Keys Pipeline Improvements:
+Allowed for the addition of multiple resources for key updates, enabling users to manage updates more flexibly.
+Introduced an AllEnvironmentsUpdate option, which facilitates updating keys across all env.json files in one action, streamlining the process for users.
+Deployment Type Integration:
+Enhanced the update-manifest-keys pipeline by adding a new key, "deployment_type", to support the transition from EZE CET to SC.
+Parameter Consolidation:
+Implemented variables like varEnvironment, varAccountID, and varRegion in the SC params JSON. This change reduces redundancy by eliminating multiple SC Param JSON files, simplifying the configuration process.
+The corresponding code modifications were made in the cormon-sc-provision-with-artifactname pipeline and other deployment pipelines.
+Conditional Resource Management:
+Added a "deploymentRequired" tag to allow for the conditional skipping of resources when they are not needed, providing users the ability to back out of deployments as required.
+Enhanced the logic to skip components that do not have version changes for the current release, ensuring only relevant changes are processed.
+Documentation and Knowledge Sharing:
+Created comprehensive Confluence pages detailing the manifest-based deployment pipelines, including explanations of each pipeline's function, required parameters, and relevant links. This documentation serves as a valuable resource for teams and individuals involved in the deployment process.
