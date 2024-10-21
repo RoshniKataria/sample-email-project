@@ -34,3 +34,9 @@ AWS Cloud Inventory Comparison Pipeline:
 Developed a Jenkins pipeline called aws-cloud-inventory-comparison that allows comparing services like ECS and Lambda across different environments. The comparison checks attributes like version, app image (for ECS), name, and runtime.
 Created a Python script for comparing two CSV files and publishing the results as an Excel sheet to a Confluence page.
 Throughout these efforts, I have consistently optimized processes, engineered effective solutions, and contributed to knowledge sharing via Confluence pages and demo sessions
+
+I have consistently motivated my colleagues to perform at their best, encouraging them to embody Barclays' values and mindset in all their tasks. I have taken an active role in grooming junior team members, particularly Vishal, to whom I explained the company culture and project details, helping him acclimate to our environment.
+
+I have always encouraged my teammates to focus on their personal and professional development, often suggesting they explore new technologies such as GenAI and Machine Learning to enhance their skill sets.
+
+I’ve also supported colleagues like Himanshu, Veeramani, Anjali, and Vishal whenever they needed assistance with tasks, ensuring that I delivered help promptly and contributed to their success.
