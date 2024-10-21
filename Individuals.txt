@@ -49,3 +49,11 @@ In addition to these initiatives, I have consistently completed all my mandatory
 
 
 I have also actively supported the Talent Exchange Program, where I taught my teammates dance routines, and together we delivered a performance at our launch event. This experience not only fostered team bonding but also showcased the diverse talents within our team, contributing to a fun and vibrant work culture.
+
+
+
+I am in the process of publishing a white paper for the AWS Service Quota Monitoring and Alerting Solution, which is currently under review. This document details the architecture, implementation, and benefits of the solution.
+
+Additionally, I am publishing the same documentation on the DevHub platform, where it is also under review. This will provide broader visibility and accessibility for teams looking to implement similar solutions.
+
+Furthermore, I make it a point to regularly review the pipelines we have created, conducting monthly checks to ensure they are functioning correctly and that the infrastructure deployed on AWS remains stable and efficient.
