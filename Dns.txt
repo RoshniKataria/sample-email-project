@@ -1,0 +1,44 @@
+After discussions with the CTO, we have outlined the following approach:
+
+DNS Request Flow:
+As requests come in, they will first be directed to the on-premises DNS server, which will then forward the requests to a Route 53 hosted zone (via dnsrunner/).
+DNS Records:
+We will create two A-type records for the primary and secondary regions.
+Failover Routing Policy:
+A Failover routing policy will be applied, which requires health checks. We will create two health checks for this purpose.
+Health Check Types:
+The health checks will be based on the following types:
+Endpoint health checks.
+CloudWatch metric health checks.
+Calculated health checks.
+CloudWatch Metric Health Checks:
+We will opt for CloudWatch metric-based health checks. A custom CloudWatch metric will be created with values:
+0 = OK (healthy).
+1 = In Alarm (unhealthy).
+This custom metric will be associated with the health checks in both regions.
+Primary Health Check Inversion:
+We will configure the invert feature on the primary health check. This means that if the primary health check is unhealthy (i.e., the custom metric is in an alarm state, value 1), requests will be routed to the secondary region’s health check.
+Lambda Function for Secondary Region Health:
+To make the secondary region's health check healthy (i.e., custom metric in OK state, value 0), we will create a Lambda function in the secondary region.
+This Lambda function will perform two tasks:
+It will upload a file to an S3 bucket, which will update the metric value to 0 (OK).
+It will also update the custom CloudWatch metric to indicate the secondary region is healthy.
+EventBridge Rule for Lambda:
+An EventBridge rule will be created to trigger the Lambda function in the secondary region.
+Failover Mechanism:
+Once the Lambda function updates the CloudWatch metric in the secondary region, requests will be routed to the secondary region’s A record in Route 53.
+This failover will continue until the primary region health check returns to a healthy state (i.e., the custom metric value is 0 for the primary region).
+CloudFormation Templates (CFTs)
+We will create two separate CloudFormation templates (CFTs) to implement this solution:
+
+CFT 1: Lambda, S3, EventBridge, CloudWatch Custom Metric, and Health Checks:
+This CFT will include:
+Lambda function in the secondary region.
+S3 bucket for storing health metric updates.
+EventBridge rule to trigger the Lambda.
+Custom CloudWatch metric for monitoring the health state.
+Health checks for the primary and secondary regions.
+CFT 2: Route 53 A-Type Records:
+This CFT will include:
+The creation of Route 53 A-type records for the primary and secondary regions.
+The configuration of failover routing policy.
