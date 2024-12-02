@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  CustomMetricAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmName: "CustomMetricAlarm"
+      MetricName: "CustomMetric"
+      Namespace: "CustomNamespace"
+      Statistic: "Maximum"
+      Period: 60
+      EvaluationPeriods: 1
+      Threshold: 0.5
+      ComparisonOperator: "GreaterThanThreshold"
+      TreatMissingData: "breaching"
+      ActionsEnabled: false  # Set to true and add actions if required
+
+Outputs:
+  AlarmName:
+    Description: "The name of the CloudWatch Alarm"
+    Value: !Ref CustomMetricAlarm
