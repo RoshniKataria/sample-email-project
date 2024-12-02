@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+  
+  # IAM Role for Lambda with S3 and CloudWatch permissions
+  LambdaExecutionRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: "lambda.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "S3AndCloudWatchPolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "s3:GetObject"
+                Resource: "arn:aws:s3:::my-unique-bucket-name/*"  # Replace with your bucket ARN
+              - Effect: "Allow"
+                Action:
+                  - "cloudwatch:PutMetricData"
+                Resource: "*"
+
+  # Lambda Function to check file existence and publish metric to CloudWatch
+  FileCheckLambda:
+    Type: "AWS::Lambda::Function"
+    Properties:
+      Handler: "lambda_function.handler"
+      Role: !GetAtt LambdaExecutionRole.Arn
+      FunctionName: "FileCheckLambda"
+      Code:
+        S3Bucket: "your-code-s3-bucket"  # Replace with your code S3 bucket
+        S3Key: "lambda-code.zip"  # Replace with your Lambda code file name
+      Runtime: "python3.8"  # Use Python runtime
+      Timeout: 60  # Set timeout for the Lambda function execution
+      MemorySize: 128  # Set memory size for the Lambda function
+
+  # EventBridge rule to trigger the Lambda function every 12 hours
+  FileCheckRule:
+    Type: "AWS::Events::Rule"
+    Properties:
+      Name: "FileCheckScheduledRule"
+      ScheduleExpression: "rate(12 hours)"  # Triggers every 12 hours
+      State: "ENABLED"
+      Targets:
+        - Arn: !GetAtt FileCheckLambda.Arn
+          Id: "FileCheckLambdaTarget"
+
+  # Permission for EventBridge to invoke the Lambda function
+  LambdaInvokePermission:
+    Type: "AWS::Lambda::Permission"
+    Properties:
+      Action: "lambda:InvokeFunction"
+      FunctionName: !Ref FileCheckLambda
+      Principal: "events.amazonaws.com"
+      SourceArn: !GetAtt FileCheckRule.Arn
+
+Outputs:
+  LambdaFunctionName:
+    Description: "Lambda Function Name"
+    Value: !Ref FileCheckLambda
+  EventRuleName:
+    Description: "EventBridge Rule Name"
+    Value: !Ref FileCheckRule
