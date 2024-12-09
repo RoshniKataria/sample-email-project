@@ -1,0 +1,10 @@
+Please proceed with copying the CFT into your repository.
+Starting with the January release, all IAM service roles will be moved out of the development repositories, including future releases.
+Pending tasks for ENX: The migration of IAM service roles for eZe and Vet via the manifest is still in progress.
+All AM roles will now be managed solely through the SC process.
+Since there are still some pending environments, your changes won’t be affected for the time being.
+Continue to follow the same process as you do for other infrastructure components.
+Ensure that all changes go through the appropriate release branches.
+Test and validate all changes across every environment, and continue promotions up to eZe for now. We’ll decide next steps after that.
+Please share the AD group request and feature details, so I can create the corresponding JIRAs.
+Let me know if anything needs further clarification.
